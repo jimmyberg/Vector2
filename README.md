@@ -1,8 +1,8 @@
-# 3d Vector c++ libary
+# 2d Vector c++ libary
 Made by Jimmy van den Berg in The Netherlands
-18 August 2015
+25 November 2015
 
-c++ library for 3 dimensional vector calculations
+c++ library for 2 dimensional vector calculations
 
 ## Example
 
