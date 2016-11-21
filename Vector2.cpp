@@ -64,6 +64,12 @@ void Vector2<T>::normalize(){
 	y /= lenght;
 }
 template<typename T>
+void Vector2<T>::rotate(T rotation){
+	T x_1 = x;
+	x = (x * cos(rotation)) - (y * sin(rotation));
+	y = (x_1 * sin(rotation)) + (y * cos(rotation));
+}
+template<typename T>
 Vector2<T> Vector2<T>::normalized() const{
 	T lenght = sqrt(pow(x,2) + pow(y,2));
 	return Vector2<T>(

@@ -25,8 +25,9 @@ public:
 	Vector2& operator*=(const Vector2 &right);
 	Vector2& operator/=(const Vector2 &right);
 
-	//fucntions
+	//functions
 	void normalize();
+	void rotate(T rotation);
 	Vector2 normalized() const;
 	T absolute() const;
 	static T dotProduct(const Vector2 &left, const Vector2 &right);
