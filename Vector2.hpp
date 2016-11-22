@@ -37,6 +37,12 @@ public:
 	 */
 	void rotate(T rotation);
 	/**
+	 * @brief Rotate the vector clockwize in the z direction
+	 * 
+	 * @param rotation Rotation angle in radians.
+	 */
+	Vector2 rotated(T rotation) const;
+	/**
 	 * @brief Return a vector that is the normelized vector of this vector
 	 * @details [long description]
 	 * @return this vector normilized
