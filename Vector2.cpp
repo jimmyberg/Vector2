@@ -71,7 +71,7 @@ void Vector2<T>::rotate(T rotation){
 }
 template<typename T>
 Vector2<T> Vector2<T>::rotated(T rotation) const{
-	return Vector2 ret(
+	return Vector2(
 		(x * cos(rotation)) - (y * sin(rotation)),
 		(x * sin(rotation)) + (y * cos(rotation))
 	);
