@@ -53,15 +53,19 @@ Vector2<T>& Vector2<T>::operator*=(const Vector2<T> &right){
 }
 template<typename T>
 Vector2<T>& Vector2<T>::operator/=(const Vector2<T> &right){
-	x /= right.x;
-	y /= right.y;
+	if(right.x != 0 && right.y != 0){
+		x /= right.x;
+		y /= right.y;
+	}
 	return *this;
 }
 template<typename T>
 void Vector2<T>::normalize(){
-	T lenght = sqrt(pow(x,2) + pow(y,2));
-	x /= lenght;
-	y /= lenght;
+	if(x != 0 && y != 0){
+		T lenght = sqrt(pow(x, 2) + pow(y, 2));
+		x /= lenght;
+		y /= lenght;
+	}
 }
 template<typename T>
 void Vector2<T>::rotate(T rotation){
@@ -78,14 +82,19 @@ Vector2<T> Vector2<T>::rotated(T rotation) const{
 }
 template<typename T>
 Vector2<T> Vector2<T>::normalized() const{
-	T lenght = sqrt(pow(x,2) + pow(y,2));
-	return Vector2<T>(
-		x / lenght,
-		y / lenght);
+	if(x != 0 && y != 0){
+		T lenght = sqrt(pow(x, 2) + pow(y, 2));
+		return Vector2<T>(
+			x / lenght,
+			y / lenght);
+	}
+	else{
+		return Vector2<T>(0, 0);
+	}
 }
 template<typename T>
 T Vector2<T>::absolute() const{
-	return sqrt(pow(x,2) + pow(y,2) + pow(z,2));
+	return sqrt(pow(x, 2) + pow(y, 2));
 }
 template<typename T>
 T Vector2<T>::dotProduct(const Vector2<T> &left, const Vector2<T> &right){

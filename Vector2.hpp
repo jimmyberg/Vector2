@@ -13,7 +13,7 @@ public:
 	Vector2();
 
 	//variables
-	T x,y,z;
+	T x,y;
 
 	//operators
 	Vector2 operator+(const Vector2 &right) const;
