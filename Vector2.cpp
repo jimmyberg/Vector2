@@ -61,7 +61,7 @@ Vector2<T>& Vector2<T>::operator/=(const Vector2<T> &right){
 }
 template<typename T>
 void Vector2<T>::normalize(){
-	if(x != 0 && y != 0){
+	if(x != 0 || y != 0){
 		T lenght = sqrt(pow(x, 2) + pow(y, 2));
 		x /= lenght;
 		y /= lenght;
@@ -82,7 +82,7 @@ Vector2<T> Vector2<T>::rotated(T rotation) const{
 }
 template<typename T>
 Vector2<T> Vector2<T>::normalized() const{
-	if(x != 0 && y != 0){
+	if(x != 0 || y != 0){
 		T lenght = sqrt(pow(x, 2) + pow(y, 2));
 		return Vector2<T>(
 			x / lenght,
