@@ -13,15 +13,19 @@ c++ library for 2 dimensional vector calculations
 using namespace std;
 
 int main(void){
+    // Create two vectors for this demonstration.
     Vector2<double> testVector1(1, 2);
     Vector2<double> testVector2(3, 2);
+    // Print the vectors
     cout << "testVector1 = " << testVector1 << endl
-    << "testVector2 = " << testVector2 << endl
-    << "testVector1 + testVector2 = " << testVector1 + testVector2 << endl
-    << "testVector1 - testVector2 = " << testVector1 - testVector2 << endl
-    << "testVector1 * testVector2 = " << testVector1 * testVector2 << endl
-    << "Vector2<double>::dotProduct(testVector1, testVector2) = " << Vector2<double>::dotProduct(testVector1, testVector2) << endl;
-
+        << "testVector2 = " << testVector2 << endl
+        // Print vector operations + - and * and their results.
+        << "testVector1 + testVector2 = " << testVector1 + testVector2 << endl
+        << "testVector1 - testVector2 = " << testVector1 - testVector2 << endl
+        << "testVector1 * testVector2 = " << testVector1 * testVector2 << endl
+        // Print the dot product of the two vectors.
+        << "Vector2<double>::dotProduct(testVector1, testVector2) = " << Vector2<double>::dotProduct(testVector1, testVector2) << endl;
+    // Print instruction for Windows users to press enter to close the terminal.
     cout << "Press enter to exit." << endl;
     cin.get();
     return 1;
